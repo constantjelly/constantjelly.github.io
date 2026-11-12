@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayan Kashyap - home</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<style>
+:root{--paper:#fffff2;--ink:#111;--link:#0000d0;--visited:#551a8b;--bar:#ffe74a;--rule:#8a8a5a;--side:#f1f0d0;--err:#b00000}
+@media (prefers-color-scheme:dark){:root{--paper:#14140c;--ink:#e8e8d0;--link:#8fb4ff;--visited:#c39bff;--bar:#6b5d00;--rule:#6a6a48;--side:#1f1f12;--err:#ff7b7b}}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;color:var(--ink);font:15px/1.5 Verdana,Geneva,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--link)}a:visited{color:var(--visited)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+header{background:linear-gradient(rgba(255,255,240,.6),rgba(255,255,240,.6)),url("img/banner.jpg") center/cover,var(--bar);border-bottom:2px solid var(--ink);padding:10px 16px}
+@media (prefers-color-scheme:dark){header{background:linear-gradient(rgba(20,20,12,.65),rgba(20,20,12,.65)),url("img/banner.jpg") center/cover,var(--bar)}}
+header pre{margin:0;font:12px/1.15 "Courier New",monospace;overflow-x:auto;white-space:pre}
+header p{margin:4px 0 0;font-size:13px}
+.cur{animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cur{animation:none}}
+.wrap{display:flex;max-width:1000px;margin:0 auto;align-items:flex-start}
+nav{width:170px;flex:none;background:var(--side);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px;margin:0;position:sticky;top:0}
+nav h3{margin:0 0 6px;font-size:13px}
+nav ul{list-style:none;margin:0 0 14px;padding:0}
+nav li{margin:2px 0}
+nav li a{display:block;padding:1px 4px;text-decoration:none}
+nav li a.on{background:var(--ink);color:var(--paper)}
+.btn88{display:inline-block;width:88px;height:31px;border:2px outset var(--rule);background:var(--bar);font:10px/13px "Courier New",monospace;text-align:center;padding-top:2px;color:var(--ink);text-decoration:none;margin:2px 0}
+main{flex:1;min-width:0;padding:16px 22px 40px}
+h1{font:bold 22px Georgia,"Times New Roman",serif;margin:0 0 4px;border-bottom:2px solid var(--ink)}
+h2{font:bold 17px Georgia,serif;margin:24px 0 6px;border-bottom:1px dotted var(--rule)}
+section{display:none}section.on{display:block}
+.meta{color:var(--rule);font-size:12px}
+.card{display:flex;gap:12px;border:2px outset var(--rule);background:var(--side);padding:8px;margin:10px 0;text-decoration:none;color:var(--ink)}
+.card:visited{color:var(--ink)}
+.card img{width:150px;height:90px;object-fit:cover;border:1px solid var(--ink);flex:none;background:var(--paper)}
+.card b{display:block;color:var(--link);text-decoration:underline}
+.card small{display:block;color:var(--rule)}
+.post{border-top:1px dotted var(--rule);padding:8px 0}
+.post h3{margin:0;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.grid figure{margin:0;border:2px outset var(--rule);background:var(--side);padding:4px}
+.grid img{width:100%;height:120px;object-fit:cover;display:block;cursor:pointer}
+.grid figcaption{font-size:12px;padding-top:3px}
+dialog{max-width:92vw;border:3px outset var(--rule);background:var(--paper);color:var(--ink);padding:8px}
+dialog img{max-width:100%;max-height:78vh;display:block}
+label{display:block;margin:8px 0 2px;font-size:13px}
+input,textarea{width:100%;font:13px "Courier New",monospace;padding:4px;border:2px inset var(--rule);background:var(--paper);color:var(--ink)}
+button{font:13px Verdana,sans-serif;padding:3px 12px;border:2px outset var(--rule);background:var(--bar);color:var(--ink);cursor:pointer;margin:8px 6px 0 0}
+button:active{border-style:inset}
+.st{margin-top:8px;font-size:13px}.st.bad{color:var(--err)}
+fieldset{border:1px solid var(--rule);margin:12px 0;padding:6px 12px 12px}
+footer{border-top:2px solid var(--ink);background:var(--side);font-size:12px;text-align:center;padding:8px}
+@media (max-width:640px){.wrap{display:block}nav{width:auto;position:static;border-right:0;display:flex;flex-wrap:wrap;gap:0 18px}nav ul{margin-bottom:6px}main{padding:14px}.card{flex-direction:column}.card img{width:100%;height:140px}}
+</style>
+</head>
+<body>
+<header>
+<pre>
+    _                           _  __          _                     _
+   / \  _   _  __ _ _ __       | |/ /__ _ ___| |__  _   _  __ _ _ __ | |
+  / _ \| | | |/ _` | '_ \      | ' // _` / __| '_ \| | | |/ _` | '_ \| |
+ / ___ \ |_| | (_| | | | |     | . \ (_| \__ \ | | | |_| | (_| | |_) |_|
+/_/   \_\__, |\__,_|_| |_|     |_|\_\__,_|___/_| |_|\__, |\__,_| .__/(_)
+        |___/                                        |___/     |_|
+</pre>
+<p>Guwahati, Assam &mdash; journalism, space, tea and code. <span class="cur">_</span></p>
+</header>
+
+<div class="wrap">
+<nav aria-label="Main">
+<h3>Menu</h3>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#admin">Admin</a></li>
+</ul>
+<h3>Badges</h3>
+<span class="btn88">no gov ads</span><br>
+<span class="btn88">made by hand</span><br>
+<span class="btn88">best on any browser</span>
+<p class="meta">You are visitor<br>#<span id="hits">0</span> on this browser</p>
+</nav>
+
+<main>
+<section id="home">
+<h1>Welcome</h1>
+<p>I'm <b>Ayan Kashyap</b>. I run <a href="https://www.speakforassam.com/">Speak for Assam</a>, an independent news platform that takes reports from contributors and takes no government advertising. I am also the founder of a small passion project called <a href="https://polaristhespace.vercel.app/">Polaristhespace</a>, Its a space photograph gallery for anyone who wants to upload their pictures of the sky. I also build websites and contribute to opensource linux in my freetime!.</p>
+<p>This site holds my work, my writing, my photos and the links I want to keep.</p>
+<h2>Latest post</h2>
+<div id="latest"><span class="meta">loading...</span></div>
+<h2>Latest link</h2>
+<div id="latestLink"></div>
+</section>
+
+<section id="projects">
+<h1>Projects</h1>
+<div id="projCards"></div>
+<h2>Also</h2>
+<p><b>Saah Paat</b> &mdash; Assam CTC tea, repackaged under my own brand.<br>
+<b>Desktop widgets</b> &mdash; a macOS-style calendar and weather for AwesomeWM on Void Linux.</p>
+</section>
+
+<section id="blog">
+<h1>Blog</h1>
+<div id="posts"></div>
+</section>
+
+<section id="gallery">
+<h1>Gallery</h1>
+<div id="grid" class="grid"></div>
+<p class="meta" id="emptyImg" hidden>No pictures yet. Upload one from #admin.</p>
+</section>
+
+<section id="links">
+<h1>Links</h1>
+<p class="meta">Sites I made or like. Each preview is fetched live.</p>
+<div id="linkCards"></div>
+</section>
+
+<section id="contact">
+<h1>Contact</h1>
+<p>Email: <a href="mailto:kashyapayan258@gmail.com">kashyapayan258@gmail.com</a></p>
+<p>Location: Guwahati, Assam, India</p>
+</section>
+
+<section id="admin">
+<h1>Admin</h1>
+<p>Publishing writes straight to your GitHub repo (a commit per change), and GitHub Pages rebuilds in about a minute. The token stays in this browser only.</p>
+<fieldset><legend>Connect</legend>
+<label for="repo">Repo (username/repo)</label><input id="repo" placeholder="ayan/ayan.github.io">
+<label for="tok">Fine-grained token (Contents: read and write, this repo only)</label><input id="tok" type="password" autocomplete="off">
+<button id="saveTok" type="button">Save in this browser</button><button id="clearTok" type="button">Forget token</button>
+</fieldset>
+<fieldset><legend>Add a link</legend>
+<label for="lurl">URL</label><input id="lurl" placeholder="https://...">
+<label for="lnote">Note (optional)</label><input id="lnote">
+<button id="addLink" type="button">Add link</button>
+</fieldset>
+<fieldset><legend>Upload an image</legend>
+<label for="ifile">File</label><input id="ifile" type="file" accept="image/*">
+<label for="icap">Caption</label><input id="icap">
+<button id="addImg" type="button">Upload image</button>
+</fieldset>
+<fieldset><legend>Write a post</legend>
+<label for="ptitle">Title</label><input id="ptitle">
+<label for="pbody">Body (blank line = new paragraph)</label><textarea id="pbody" rows="7"></textarea>
+<button id="addPost" type="button">Publish post</button>
+</fieldset>
+<div id="status" class="st" role="status"></div>
+</section>
+</main>
+</div>
+
+<footer>&copy; &bull; This website was made by a human, reject AI. &bull; last updated <span id="upd"></span></footer>
+<dialog id="lb"><img id="lbi" alt=""><form method="dialog"><button>Close</button></form></dialog>
+
+<script>
+var DATA={links:[],posts:[],images:[]};
+var PROJECTS=[
+ {url:"https://www.speakforassam.com/",note:"Independent journalism platform. Contributors with no affiliation publish reports. No government advertising."},
+ {url:"https://polaris-sable-rho.vercel.app/",note:"Polaris, a website about space and astronomy."}
+];
+var $=function(i){return document.getElementById(i)};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+
+/* routing */
+var PAGES=["home","projects","blog","gallery","links","contact","admin"];
+function route(){
+ var h=(location.hash||"#home").slice(1);if(PAGES.indexOf(h)<0)h="home";
+ PAGES.forEach(function(p){$(p).classList.toggle("on",p===h)});
+ document.querySelectorAll("nav li a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
+ document.title="Ayan Kashyap - "+h;window.scrollTo(0,0);
+}
+addEventListener("hashchange",route);
+
+/* link previews via microlink (works from static hosting), cached in this browser */
+function host(u){try{return new URL(u).hostname.replace(/^www\./,"")}catch(e){return u}}
+function card(url,note){
+ var a=el("a","card");a.href=url;a.target="_blank";a.rel="noopener";
+ var img=el("img");img.alt="";img.hidden=true;
+ var box=el("div");var t=el("b",null,host(url));var d=el("span",null,note||"");var s=el("small",null,url);
+ box.append(t,d,s);a.append(img,box);
+ function fill(m){if(m.title)t.textContent=m.title;if(!note&&m.description)d.textContent=m.description;
+  var src=(m.image&&m.image.url)||(m.logo&&m.logo.url);if(src){img.src=src;img.hidden=false}}
+ var key="pv:"+url,c=null;try{c=JSON.parse(localStorage.getItem(key))}catch(e){}
+ if(c){fill(c)}else{
+  fetch("https://api.microlink.io/?url="+encodeURIComponent(url)).then(function(r){return r.json()}).then(function(j){
+   if(j&&j.status==="success"){fill(j.data);try{localStorage.setItem(key,JSON.stringify({title:j.data.title,description:j.data.description,image:j.data.image,logo:j.data.logo}))}catch(e){}}
+  }).catch(function(){});
+ }
+ return a;
+}
+
+/* render */
+function paras(txt){var f=document.createDocumentFragment();String(txt).split(/\n\s*\n/).forEach(function(p){f.append(el("p",null,p))});return f}
+function postEl(p){var d=el("div","post");d.id="post-"+p.id;d.append(el("h3",null,p.title),el("div","meta",p.date),paras(p.body));return d}
+function render(){
+ var posts=DATA.posts.slice().sort(function(a,b){return a.date<b.date?1:-1});
+ $("posts").replaceChildren.apply($("posts"),posts.map(postEl));
+ $("latest").replaceChildren(posts[0]?postEl(posts[0]):el("span","meta","No posts yet."));
+ var ls=DATA.links.slice().reverse();
+ $("linkCards").replaceChildren.apply($("linkCards"),ls.map(function(l){return card(l.url,l.note)}));
+ $("latestLink").replaceChildren(ls[0]?card(ls[0].url,ls[0].note):el("span","meta","No links yet."));
+ var g=$("grid");g.replaceChildren();
+ DATA.images.slice().reverse().forEach(function(im){
+  var f=el("figure"),i=el("img");i.src=im.src;i.alt=im.caption||"";i.loading="lazy";
+  i.onclick=function(){$("lbi").src=im.src;$("lbi").alt=i.alt;$("lb").showModal()};
+  f.append(i,el("figcaption",null,im.caption||""));g.append(f)});
+ $("emptyImg").hidden=DATA.images.length>0;
+}
+function loadData(){
+ fetch("data.json?"+Date.now()).then(function(r){return r.json()}).then(function(d){DATA=d}).catch(function(){}).then(function(){
+  $("projCards").replaceChildren.apply($("projCards"),PROJECTS.map(function(p){return card(p.url,p.note)}));render()});
+}
+
+/* admin: commits to the repo through the GitHub contents API */
+function say(m,bad){var s=$("status");s.textContent=m;s.className="st"+(bad?" bad":"")}
+function gh(path,method,body){
+ var repo=$("repo").value.trim(),tok=$("tok").value.trim();
+ if(!repo||!tok){throw new Error("Fill in the repo and the token first.")}
+ return fetch("https://api.github.com/repos/"+repo+"/contents/"+path,{method:method||"GET",headers:{Authorization:"Bearer "+tok,Accept:"application/vnd.github+json"},body:body?JSON.stringify(body):undefined}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.message||r.status);return j})});
+}
+function b64u(s){return btoa(unescape(encodeURIComponent(s)))}
+function fromb64(s){return decodeURIComponent(escape(atob(s.replace(/\n/g,""))))}
+function mutate(fn,msg){
+ return gh("data.json").then(function(f){var d=JSON.parse(fromb64(f.content));fn(d);
+  return gh("data.json","PUT",{message:msg,content:b64u(JSON.stringify(d,null,2)+"\n"),sha:f.sha}).then(function(){DATA=d;render()})});
+}
+function run(p,ok){say("Working...");try{p.then(function(){say(ok)}).catch(function(e){say("Failed: "+e.message,1)})}catch(e){say(e.message,1)}}
+$("saveTok").onclick=function(){localStorage.setItem("gh:repo",$("repo").value.trim());localStorage.setItem("gh:tok",$("tok").value.trim());say("Saved in this browser.")};
+$("clearTok").onclick=function(){localStorage.removeItem("gh:tok");$("tok").value="";say("Token removed from this browser.")};
+$("addLink").onclick=function(){var u=$("lurl").value.trim();if(!/^https?:\/\//.test(u)){say("The URL must start with http:// or https://",1);return}
+ run(mutate(function(d){d.links.push({url:u,note:$("lnote").value.trim()})},"add link "+host(u)).then(function(){$("lurl").value="";$("lnote").value=""}),"Link added. The live site updates in about a minute.")};
+$("addPost").onclick=function(){var t=$("ptitle").value.trim(),b=$("pbody").value.trim();if(!t||!b){say("A post needs a title and a body.",1);return}
+ var id=t.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+"-"+Date.now().toString(36);
+ run(mutate(function(d){d.posts.push({id:id,title:t,date:new Date().toISOString().slice(0,10),body:b})},"post: "+t).then(function(){$("ptitle").value="";$("pbody").value=""}),"Post published.")};
+$("addImg").onclick=function(){var f=$("ifile").files[0];if(!f){say("Choose an image first.",1);return}
+ if(f.size>8e6){say("That image is over 8 MB. Resize it first.",1);return}
+ var name="img/"+Date.now()+"-"+f.name.replace(/[^a-zA-Z0-9._-]/g,"_");
+ var rd=new FileReader();rd.onload=function(){
+  run(gh(name,"PUT",{message:"upload "+f.name,content:rd.result.split(",")[1]}).then(function(){return mutate(function(d){d.images.push({src:name,caption:$("icap").value.trim(),date:new Date().toISOString().slice(0,10)})},"gallery: "+f.name)}).then(function(){$("icap").value="";$("ifile").value=""}),"Image uploaded. It may take a minute to appear.")};
+ rd.readAsDataURL(f)};
+
+/* init */
+$("repo").value=localStorage.getItem("gh:repo")||"";$("tok").value=localStorage.getItem("gh:tok")||"";
+var n=(parseInt(localStorage.getItem("hits"),10)||0)+1;localStorage.setItem("hits",n);$("hits").textContent=String(n).padStart(5,"0");
+$("upd").textContent=new Date(document.lastModified).toISOString().slice(0,10);
+route();loadData();
+</script>
+</body>
+</html>
