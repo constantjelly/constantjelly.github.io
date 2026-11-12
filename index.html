@@ -37,6 +37,7 @@ section{display:none}section.on{display:block}
 .card img{width:150px;height:90px;object-fit:cover;border:1px solid var(--ink);flex:none;background:var(--paper)}
 .card b{display:block;color:var(--link);text-decoration:underline}
 .card small{display:block;color:var(--rule)}
+.card b,.card small{overflow-wrap:anywhere}
 .post{border-top:1px dotted var(--rule);padding:8px 0}
 .post h3{margin:0;font-size:15px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
@@ -52,12 +53,12 @@ button:active{border-style:inset}
 .st{margin-top:8px;font-size:13px}.st.bad{color:var(--err)}
 fieldset{border:1px solid var(--rule);margin:12px 0;padding:6px 12px 12px}
 footer{border-top:2px solid var(--ink);background:var(--side);font-size:12px;text-align:center;padding:8px}
-@media (max-width:640px){.wrap{display:block}nav{width:auto;position:static;border-right:0;display:flex;flex-wrap:wrap;gap:0 18px}nav ul{margin-bottom:6px}main{padding:14px}.card{flex-direction:column}.card img{width:100%;height:140px}}
+@media (max-width:640px){.wrap{display:block}nav{width:auto;position:static;border-right:0}nav li a{padding:6px 4px}main{padding:14px}.card{flex-direction:column}.card img{width:100%;height:140px}input,textarea{font-size:16px}.btn88{height:auto;min-height:31px}header pre{font-size:min(12px,1.95vw)}}
 </style>
 </head>
 <body>
 <header>
-<pre>
+<pre aria-hidden="true">
     _                           _  __          _                     _
    / \  _   _  __ _ _ __       | |/ /__ _ ___| |__  _   _  __ _ _ __ | |
   / _ \| | | |/ _` | '_ \      | ' // _` / __| '_ \| | | |/ _` | '_ \| |
@@ -65,7 +66,7 @@ footer{border-top:2px solid var(--ink);background:var(--side);font-size:12px;tex
 /_/   \_\__, |\__,_|_| |_|     |_|\_\__,_|___/_| |_|\__, |\__,_| .__/(_)
         |___/                                        |___/     |_|
 </pre>
-<p>Guwahati, Assam &mdash; journalism, space, tea and code. <span class="cur">_</span></p>
+<p>Guwahati, Assam &mdash; Founder, developer, writer and a political nerd. <span class="cur">_</span></p>
 </header>
 
 <div class="wrap">
@@ -80,10 +81,9 @@ footer{border-top:2px solid var(--ink);background:var(--side);font-size:12px;tex
 <li><a href="#contact">Contact</a></li>
 </ul>
 <h3>Badges</h3>
-<span class="btn88">no gov ads</span><br>
-<span class="btn88">made by hand</span><br>
-<span class="btn88">best on any browser</span>
-<p class="meta">You are visitor<br>#<span id="hits">0</span> on this browser</p>
+<span class="btn88">Founder</span><br>
+<span class="btn88">Endorsing Human Art</span><br>
+<span class="btn88">i like fries.</span>
 </nav>
 
 <main>
@@ -121,7 +121,7 @@ footer{border-top:2px solid var(--ink);background:var(--side);font-size:12px;tex
 
 <section id="contact">
 <h1>Contact</h1>
-<p>Email: <a href="mailto:kashyapayan258@gmail.com">kashyapayan258@gmail.com</a></p>
+<p>Email: <a href="mailto:ayankashyap258@gmail.com">ayankashyap258@gmail.com</a></p>
 <p>Location: Guwahati, Assam, India</p>
 </section>
 
@@ -154,7 +154,7 @@ footer{border-top:2px solid var(--ink);background:var(--side);font-size:12px;tex
 </div>
 
 <footer>&copy; &bull; This website was made by a human, reject AI. &bull; last updated <span id="upd"></span></footer>
-<dialog id="lb"><img id="lbi" alt=""><form method="dialog"><button>Close</button></form></dialog>
+<dialog id="lb" aria-label="Image preview"><img id="lbi" alt=""><form method="dialog"><button>Close</button></form></dialog>
 
 <script>
 var DATA={links:[],posts:[],images:[]};
@@ -195,18 +195,20 @@ function card(url,note){
 
 /* render */
 function paras(txt){var f=document.createDocumentFragment();String(txt).split(/\n\s*\n/).forEach(function(p){f.append(el("p",null,p))});return f}
-function postEl(p){var d=el("div","post");d.id="post-"+p.id;d.append(el("h3",null,p.title),el("div","meta",p.date),paras(p.body));return d}
+function postEl(p,withId){var d=el("div","post");if(withId!==false)d.id="post-"+p.id;d.append(el("h3",null,p.title),el("div","meta",p.date),paras(p.body));return d}
 function render(){
  var posts=DATA.posts.slice().sort(function(a,b){return a.date<b.date?1:-1});
  $("posts").replaceChildren.apply($("posts"),posts.map(postEl));
- $("latest").replaceChildren(posts[0]?postEl(posts[0]):el("span","meta","No posts yet."));
+ $("latest").replaceChildren(posts[0]?postEl(posts[0],false):el("span","meta","No posts yet."));
  var ls=DATA.links.slice().reverse();
  $("linkCards").replaceChildren.apply($("linkCards"),ls.map(function(l){return card(l.url,l.note)}));
  $("latestLink").replaceChildren(ls[0]?card(ls[0].url,ls[0].note):el("span","meta","No links yet."));
  var g=$("grid");g.replaceChildren();
  DATA.images.slice().reverse().forEach(function(im){
   var f=el("figure"),i=el("img");i.src=im.src;i.alt=im.caption||"";i.loading="lazy";
+  i.tabIndex=0;i.setAttribute("role","button");i.setAttribute("aria-label",im.caption?"Open image: "+im.caption:"Open image");
   i.onclick=function(){$("lbi").src=im.src;$("lbi").alt=i.alt;$("lb").showModal()};
+  i.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();i.click()}};
   f.append(i,el("figcaption",null,im.caption||""));g.append(f)});
  $("emptyImg").hidden=DATA.images.length>0;
 }
@@ -219,7 +221,7 @@ function loadData(){
 function say(m,bad){var s=$("status");s.textContent=m;s.className="st"+(bad?" bad":"")}
 function gh(path,method,body){
  var repo=$("repo").value.trim(),tok=$("tok").value.trim();
- if(!repo||!tok){throw new Error("Fill in the repo and the token first.")}
+ if(!repo||!tok){return Promise.reject(new Error("Fill in the repo and the token first."))}
  return fetch("https://api.github.com/repos/"+repo+"/contents/"+path,{method:method||"GET",headers:{Authorization:"Bearer "+tok,Accept:"application/vnd.github+json"},body:body?JSON.stringify(body):undefined}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.message||r.status);return j})});
 }
 function b64u(s){return btoa(unescape(encodeURIComponent(s)))}
@@ -245,8 +247,7 @@ $("addImg").onclick=function(){var f=$("ifile").files[0];if(!f){say("Choose an i
 
 /* init */
 $("repo").value=localStorage.getItem("gh:repo")||"";$("tok").value=localStorage.getItem("gh:tok")||"";
-var n=(parseInt(localStorage.getItem("hits"),10)||0)+1;localStorage.setItem("hits",n);$("hits").textContent=String(n).padStart(5,"0");
-$("upd").textContent=new Date(document.lastModified).toISOString().slice(0,10);
+var lm=new Date(document.lastModified);$("upd").textContent=isNaN(lm.getTime())?new Date().toISOString().slice(0,10):lm.toISOString().slice(0,10);
 route();loadData();
 </script>
 </body>
