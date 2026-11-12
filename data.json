@@ -3,12 +3,6 @@
     { "url": "https://www.speakforassam.com/", "note": "Independent journalism for Assam. I founded it. No government ads, open to non-affiliated contributors." }
   ],
   "posts": [
-    {
-      "id": "hello-world",
-      "title": "Hello, world wide web",
-      "date": "2026-11-12",
-      "body": "This is the first post. This site is portfolio, blog, photo shelf and link collection in one place.\n\nTo write a new post, open #admin, paste a GitHub token once, and publish from the browser."
-    }
   ],
   "images": []
 }
