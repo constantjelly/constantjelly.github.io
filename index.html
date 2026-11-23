@@ -1,3 +1,4 @@
+!<!DOCTYPE html>
 <html>
         <head>
             <style>
@@ -16,7 +17,7 @@
               }
               .arrow {
               display: block;
-              margin: 10px auto;
+              margin: px auto;
               width: 32px;
               image-rendering: pixelated;
               transform: rotate(-90deg);
@@ -38,8 +39,6 @@
 
               .navigation {
                 max-width: fit-content;
-                margin: 0 auto;
-                text-align: center;
               }
               nav a {
                 color:darkgreen;
@@ -67,9 +66,13 @@
               }
 
               .rabbit {
+                width: 170px;
+                height: auto;
+                position: absolute;
+                right: 170px;
+                top: 180px;
+
                 transition: transform 0.3s ease;
-                margin: 0 auto;
-                text-align: center;
               }
               .rabbit:hover {
                 transform: scale(1.3) rotate(3deg);
@@ -77,12 +80,18 @@
               .speakforassam {
                 width: 400px;
                 height: auto;
-                position: left;
               }
               .polaristhespace {
                 width: 400px;
                 height: auto;
-                position: absolute;
+              }
+              .menu a {
+                color: darkgreen;
+                text-decoration: none;
+              }
+              .menu a:hover {
+                color: black;
+                text-decoration:underline;
               }
             </style>
             <title> Its not porn I swear.</title>
@@ -100,12 +109,12 @@
             <a href="about.html">
             <img src="assets/boy.png" alt="me" class="character"  >
             </a>
-            <nav>
-              <a href="about.html">About me </a> <br>
-              <a href="blog.html">blog </a> <br>
-              <a href="gallery.html">gallery </a> <br>
-              <a href="contact.html">contact me </a>
-            </nav>
+            <ul class="menu">
+              <li><a href="about.html">about </a></li>
+              <li><a href="blog.html">blog </a></li>
+              <li><a href="gallery.html">gallery </a></li>
+              <li><a href="contact.html">contact </a></li>
+            </ul>
           </div>
           <a href="gallery.html">
             <img src="assets/usagimanjuu.png" alt="rabbit" class="rabbit" >
