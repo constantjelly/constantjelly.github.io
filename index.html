@@ -15,22 +15,6 @@
                 background-image: repeating-linear-gradient(45deg,rgba(255, 255, 255, 0.35) 0 1px,transparent 1px 4px
                 );
               }
-              .arrow {
-              display: block;
-              margin: px auto;
-              width: 32px;
-              image-rendering: pixelated;
-              transform: rotate(-90deg);
-              animation: bounce 1s ease-in-out infinite;
-            }
-              @keyframes bounce {
-              0%, 100% {
-              transform: translateY(0) rotate(-90deg);
-            }
-              50% {
-              transform: translateY(10px) rotate(-90deg);
-            }
-          }
               .intro {
                 max-width: 600px;
                 margin: 0 auto;
@@ -39,12 +23,15 @@
 
               .navigation {
                 max-width: fit-content;
+                border: 2px solid;
+                background-color:rgb(158, 210, 68);
               }
               nav a {
-                color:darkgreen;
+                color:azure;
                 text-decoration:none;
                 font-size: 17px;
                 margin: 0;
+                text-align: left;
               }
               nav a:hover {
                 color:black;
@@ -86,29 +73,48 @@
                 height: auto;
               }
               .menu a {
-                color: darkgreen;
+                color:beige;
                 text-decoration: none;
               }
               .menu a:hover {
                 color: black;
                 text-decoration:underline;
               }
+              .menu { list-style-type: "> "; }
+              .entirebody {
+                max-width: 900px;
+                margin: 20px auto;
+                border: 1px solid;
+                background-color: honeydew;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+              }
+              .speakforassam,
+              .polaristhespace {
+                width: 400px;
+                max-width: 100%;
+                height: auto;
+              }
             </style>
             <title> Its not porn I swear.</title>
         </head>
         <body>
+          <div class="entirebody">
             <div class="intro">
             <h1 style="font-family: 'InstrumentSerif-Italic', serif; color:#394c00;">Constant's Cave</h1>
             <p style="font-family: 'InstrumentSerif-regular', serif;"> Hey, I'm Ayan. I'm 20 and I'm a developer and a writer.
                I have several passion projects in which I involve myself a lot. This is my personal website and portfolio
-               where I update regularly. feel free to explore. </p> <img src="assets/Arrow.png" alt="arrow pointing down" class="arrow">  
+               where I update regularly. feel free to explore. </p>   
             </div>
            
           <div class="navigation">
-            <h2 style="font-family: 'InstrumentSerif-Italic';"></h2> Explore the site. </h2>
+            <h2 style="font-family: 'InstrumentSerif-Italic';"> Explore the site. </h2>
+
             <a href="about.html">
             <img src="assets/boy.png" alt="me" class="character"  >
             </a>
+
             <ul class="menu">
               <li><a href="about.html">about </a></li>
               <li><a href="blog.html">blog </a></li>
@@ -122,11 +128,12 @@
             
           <h2 style="font-family: 'InstrumentSerif-Italic',serif; color:darkolivegreen;"> Find my Projects here. </h2>
           <a href="https://speakforassam.com">
-          <img src="assets/speakforassam_banner.png" alt="speakforassam" class="speakforassam" style="margin-right: 20px;">
+          <img src="assets/speakforassam_banner.png" alt="speakforassam" class="speakforassam" style="margin-right: 20px;"> <br>
           </a>
           <a href="https://polaristhespace.vercel.app">
-          <img src="assets/polaris_banner.png" alt="polaristhespace" class="polaristhespace" style="margin-right: 0px;">
+          <img src="assets/polaris_banner.png" alt="polaristhespace" class="polaristhespace" style="margin-right: 20px;">
           </a>
+          </div>
         </body>
         
 </html>
