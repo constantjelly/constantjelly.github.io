@@ -1,5 +1,9 @@
 <html>
     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Gallery </title>
+       <link rel="stylesheet" href="style.css">
         <style>
             @font-face {
                 font-family: "InstrumentSerif-Italic";
@@ -14,7 +18,34 @@
                 background-image: repeating-linear-gradient(45deg,rgba(255, 255, 255, 0.35) 0 1px,transparent 1px 4px
                 );
               }
+              .title {
+                text-align: center;
+              }
+              .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 12px;
+                padding: 12px;
+              }
+              
+              .gallery img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border: 1px solid darkgreen;
+                image-rendering: pixelated;
+              }
         </style>
+      <body>
+        <div class="title">
+        <h1 style="font-family: 'InstrumentSerif-Italic'; color: forestgreen;"> Gallery </h1>
+        <div class="gallery">
+          <img src="Gallery-images/nightride.png"nightride">
+          <img src="Gallery-images/existentialdread.jpg"> <h4 style="font-family: 'InstrumentSerif-Regular';"> A picture that stuck to me. I wonder why.</h4>
+        </div>
+        </div>
+
+      </body>
 
     </head>
 </html>
