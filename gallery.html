@@ -14,9 +14,11 @@
                 src: url("assets/fonts/InstrumentSerif-Regular.ttf");
               }
               body {
-                background-color: #b9e8c8;
-                background-image: repeating-linear-gradient(45deg,rgba(255, 255, 255, 0.35) 0 1px,transparent 1px 4px
-                );
+                background-image: url(assets/backgroundimage.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                background-attachment: fixed;
               }
               .title {
                 text-align: center;
@@ -32,18 +34,26 @@
                 width: 100%;
                 height: auto;
                 object-fit: cover;
-                border: 1px solid darkgreen;
+                border: 1px solid black;
                 image-rendering: pixelated;
+              }
+              .mochi {
+                text-align: center;
               }
         </style>
       <body>
         <div class="title">
-        <h1 style="font-family: 'InstrumentSerif-Italic'; color: forestgreen;"> Gallery </h1>
+        <h1 style="font-family: 'InstrumentSerif-Italic'; color:azure;"> Gallery </h1>
         <div class="gallery">
-          <img src="Gallery-images/nightride.png"nightride">
-          <img src="Gallery-images/existentialdread.jpg"> <h4 style="font-family: 'InstrumentSerif-Regular';"> A picture that stuck to me. I wonder why.</h4>
+          <img src="Gallery-images/nightride.png">
+          <img src="Gallery-images/existentialdread.jpg"> <h4 style="font-family: 'InstrumentSerif-Regular'; color: azure;"> A picture that stuck to me. I wonder why.</h4>
         </div>
         </div>
+      <div class="mochi">
+        <a href="index.html">
+          <img src="assets/Sakura Mochi.png" alt="mochi">
+        </a>
+      </div>  
 
       </body>
 
