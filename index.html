@@ -11,9 +11,13 @@
                 src: url("assets/fonts/InstrumentSerif-Regular.ttf");
               }
               body {
-                background-color: #b9e8c8;
-                background-image: repeating-linear-gradient(45deg,rgba(255, 255, 255, 0.35) 0 1px,transparent 1px 4px
-                );
+                margin: 0;
+                min-height: 100vh;
+                background-image: url(assets/backgroundimage.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                background-attachment: fixed;
               }
               .intro {
                 max-width: 600px;
@@ -24,7 +28,10 @@
               .navigation {
                 max-width: fit-content;
                 border: 2px solid;
-                background-color:rgb(158, 210, 68);
+                background-image: url(assets/girlandcar.jpeg);
+                background-size: cover;
+                background-repeat: repeat;
+                background-attachment: fixed;
               }
               nav a {
                 color:azure;
@@ -81,15 +88,6 @@
                 text-decoration:underline;
               }
               .menu { list-style-type: "> "; }
-              .entirebody {
-                max-width: 900px;
-                margin: 20px auto;
-                border: 1px solid;
-                background-color: honeydew;
-                padding: 20px;
-                text-align: center;
-                position: relative;
-              }
               .speakforassam,
               .polaristhespace {
                 width: 400px;
@@ -102,8 +100,8 @@
         <body>
           <div class="entirebody">
             <div class="intro">
-            <h1 style="font-family: 'InstrumentSerif-Italic', serif; color:#394c00;">Constant's Cave</h1>
-            <p style="font-family: 'InstrumentSerif-regular', serif;"> Hey, I'm Ayan. I'm 20 and I'm a developer and a writer.
+            <h1 style="font-family: 'InstrumentSerif-Italic', serif; color:azure;">Constant's Cave</h1>
+            <p style="font-family: 'InstrumentSerif-regular', serif; color: azure;"> Hey, I'm Ayan. I'm 20 and I'm a developer and a writer.
                I have several passion projects in which I involve myself a lot. This is my personal website and portfolio
                where I update regularly. feel free to explore. </p>   
             </div>
@@ -126,7 +124,7 @@
             <img src="assets/usagimanjuu.png" alt="rabbit" class="rabbit" >
           </a>
             
-          <h2 style="font-family: 'InstrumentSerif-Italic',serif; color:darkolivegreen;"> Find my Projects here. </h2>
+          <h2 style="font-family: 'InstrumentSerif-Italic',serif; color:azure;"> Find my Projects here. </h2>
           <a href="https://speakforassam.com">
           <img src="assets/speakforassam_banner.png" alt="speakforassam" class="speakforassam" style="margin-right: 20px;"> <br>
           </a>
